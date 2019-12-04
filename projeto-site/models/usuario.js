@@ -7,33 +7,33 @@ https://codewithhugo.com/sequelize-data-types-a-practical-guide/
 
 module.exports = (sequelize, DataTypes) => {
     let Usuario = sequelize.define('Usuario',{
-		ID_Usuario: {
+		idUsuario: {
 			field: 'ID_Usuario',
 			type: DataTypes.INTEGER,
 			primaryKey: true,
 			autoIncrement: true
 		},		
-		Nome_Usuario: {
+		nome: {
 			field: 'Nome_Usuario',
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		Idade: {
+		idade: {
 			field: 'Idade',
-			type: DataTypes.STRING,
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
-		Email: {
+		email: {
 			field: 'Email',
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		Instrumento: {
+		instrumento: {
 			field: 'Instrumento',
 			type: DataTypes.STRING,
 			allowNull: false
 		}, 
-		Senha: {
+		senha: {
 			field: 'Senha',
 			type: DataTypes.STRING,
 			allowNull: false

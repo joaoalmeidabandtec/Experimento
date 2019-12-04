@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,96 @@
     <link rel="stylesheet" href="./CSS/Sheet_Login.css">
     <link rel="shortcut icon" href="Imagens/Logotipo_Sheet_Music.png" type="image/x-icon">
 </head>
+
 <body>
-<div><img class="fundo" src="./Imagens/Partitura_Login.jpg" alt=""></div>
-<div class="barra">
-    <a href="Sheet_Institucional.html"><img class="logo" src="Imagens/Logotipo_Sheet_Music.png" alt="Logo"></a>
-        <a href="Sheet_Tela_Cadastro.html"><div class="conta">Não possui uma conta? Crie uma agora!</div></a>
-</div> 
+    <div><img class="fundo" src="./Imagens/Partitura_Login.jpg" alt=""></div>
+    <div class="barra">
+        <a href="home.html"><img class="logo" src="Imagens/Logotipo_Sheet_Music.png" alt="Logo"></a>
+        <a href="cadastro.html">
+            <div class="conta">Não possui uma conta? Crie uma agora!</div>
+        </a>
+    </div>
+<form id="form_login" method="post" onsubmit="return entrar()">
     <div class="entrar">Entrar</div>
 
-        <div class="login">Login:</div>
+    <div class="login">Login:</div>
 
-            <input class="campo_login" type="text" id="login">
+    <input class="campo_login" type="text" id="login" name="email">
 
-                <div class="senha">Senha:</div>
+    <div class="senha">Senha:</div>
 
-                    <input class="campo_senha" type="password" id="senha">
+    <input class="campo_senha" type="password" id="senha" name="senha">
 
-                        <button class="botao" onclick="entrar()">Entrar</button>
-<div class="barra_inferior">
-    <img class="logo_inferior"src="Imagens/Logotipo_Sheet_Music.png" alt="Logo">
-        <div class="copyrigth"> 
-            <a href="">Copyright © 2019</a>
-                Sheet Music | Todos os direitos reservados.
-                <br>
-                Desenvolvido por <a href="#">Sheet Music</a>
-                                        
-        </div>
+    <button class="botao" onclick="entrar()" id="btn_entrar">Entrar</button>
+</form>
+<div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+        
 </div>
+    <div class="barra_inferior">
+        <img class="logo_inferior" src="Imagens/Logotipo_Sheet_Music.png" alt="Logo">
+        <div class="copyrigth">
+            <a href="">Copyright © 2019</a>
+            Sheet Music | Todos os direitos reservados.
+            <br>
+            Desenvolvido por <a href="#">Sheet Music</a>
+
+        </div>
+    </div>
 </body>
+
 </html>
 <script>
-    function entrar() {
-        var username = login.value
-        var senha1 = senha.value
+    // function entrar() {
+    //     var username = login.value
+    //     var senha1 = senha.value
 
-        if (username == 'Joao' && senha1 == '12099') {
-            location.href = "Sheet_Tela_Inicial.html"
-        } else {
-            alert('Usuário ou Senha inválidos!')
-        }
+    //     if (username == 'Joao' && senha1 == '12099') {
+    //         location.href = "home.html"
+    //     } else {
+    //         alert('Usuário ou Senha inválidos!')
+    //     }
+    // }
+
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.Nome_Usuario;
+                    
+                    window.location.href = './home.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                response.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        div_erro.style.display = 'none';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        div_erro.style.display = 'block';
+        div_erro.innerHTML = resposta;
     }
 </script>
