@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.fundo{
+    position: absolute;
+    width: 751px;
+    height: 650px;
+    left: 45%;
+    top: 10%;
+}
+.barra{
+    position: absolute;
+    width: 100.7%;
+    height: 12%;
+    left: 0px;
+    top: 0px;
+    
+    background: #BD5001;
+}
+.entrar{
+    position: absolute;
+    height: 80px;
+    left: 196px;
+    top: 150px;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 83px;
+    color: #BD5001;
+}
+.login{
+    position: absolute;
+    width: 72px;
+    height: 30px;
+    left: 210px;
+    top: 300px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #BD5001;
+}
+.campo_login{
+    position: absolute;
+    width: 260px;
+    height: 35px;
+    left: 210px;
+    top: 330px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    outline: none;
+}
+.senha{
+    position: absolute;
+    width: 82px;
+    height: 38px;
+    left: 210px;
+    top: 420px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #BD5001;   
+    
+}
+.campo_senha{
+    position: absolute;
+    width: 260px;
+    height: 35px;
+    left: 210px;
+    top: 450px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    outline: none;
+}
+.botao{
+    position: absolute;
+    width: 125px;
+    height: 35px;
+    left: 277px;
+    top: 520px
+}
+.logo{
+    height: 100%;
+}
+.conta{
+    position: absolute;
+    left: 65%;
+    top: 35%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+.logo_inferior{
+    height: 100%;
+    margin-left: 18.3%;
+    padding-top: 1px;
+    width: 155px;
+}
+.barra_inferior{
+    position: absolute;
+    width: 100.7%;
+    height: 80px;
+    left: 0px;
+    top: 110%;
+    padding-bottom: 4px;
+    background: #BD5001;
+}
+.copyrigth{
+    color: #ffffff;
+    margin-top: -64px;
+    margin-left: 30%;
+}

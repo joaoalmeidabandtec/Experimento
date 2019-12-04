@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+h2{
+    margin-top: 6%;
+    margin-left: 29%;
+    font-size: 36px;
+    line-height: 28px;
+    color: black;
+}
+body{
+    background-color: rgba(222, 222, 224, 0.438);
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    background-size: 1350px;
+}
+.msg{
+    margin-left: 27%;
+    padding: 100px;
+    color: black;
+}
+.logo{
+    height: 100%;
+}
+.logo_inferior{
+    height: 100%;
+    margin-left: 18.3%;
+    padding-top: 1px;
+    width: 155px;
+}
+.barra{
+    position: absolute;
+    width: 1349px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: #BD5001;
+}
+.perfil{
+    position: absolute;
+    width: 130px;
+    height: 29px;
+    left: 90%;
+    top: 32%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #ffffff;
+}
+.categoria{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    left: 10%;
+    top: 130%;
+    background: rgba(192, 123, 32, 0.418);
+}
+.genero{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    left: 40%;
+    top: 130%;
+    background: rgba(192, 123, 32, 0.418);
+}
+.procuradas{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    left: 70%;
+    top: 130%;
+    background: rgba(192, 123, 32, 0.418);
+}
+.categoria_dificuldade{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    background-color: rgb(192, 123, 32);
+}
+.dificuldades{
+    margin-left: 22%;
+    margin-top: -11.5%;
+    font-size: 30px;
+}
+.termometro{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+.alinhar_li1{
+    position: relative;
+    margin-top: 25%;
+    left: 10%;
+}
+.alinhar_li{
+    position: relative;
+    margin-top: 5%;
+    left: 10%;
+}
+slider {
+    display: block;
+    width: 100%;
+    height: 115.7%;
+    margin-top: 5%;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: absolute;
+}
+   
+slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+   
+slide:nth-child(4){
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(../Imagens/Partitura_Cadastro.jpg);
+    background-size: cover;
+    background-position: center;
+}
+   
+slide:nth-child(3){
+    animation-delay: 2s;
+    background-image: url(../Imagens/Partitura_Cifra.jpg);
+    background-size: cover;
+    background-position: center;
+}
+   
+slide:nth-child(2){
+    animation-delay: 5s;
+    background-image: url(../Imagens/Partitura_Tablatura.jpg);
+    background-size: cover;
+    background-position: center;
+}
+   
+slide:nth-child(1){
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url(../Imagens/Partitura_Curiosidade.jpg);
+    background-size: cover;
+    background-position: center;
+}
+   
+slide p {
+    font-family: Comfortaa;
+    font-size: 70px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 30%;
+    color: black;
+}
+.botao_slide1{
+    margin-left: 75%;
+    margin-top: 3%;
+    width: 100px;
+    height: 50px;
+    background: rgba(107, 106, 105, 0.76);
+    border: 1px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    outline: none;
+}
+
+@keyframes slide {
+    0% { left: 100%; width: 100%; }
+    5% { left: 0%; }
+    25% { left: 0%; }
+    30% { left: -100%; width: 100%; }
+    30.0001% { left: -100%; width: 0%; }
+    100% { left: 100%; width: 0%; }
+}
+.texto_classico{
+    width: 400px;
+    height: 300px;
+    margin-left: 66%;
+    margin-top: 3%;
+    font-size: 42px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+
+}
+   
+.barra_inferior{
+    position: absolute;
+    width: 1349px;
+    height: 80px;
+    left: 0px;
+    top: 200%;
+    padding-bottom: 4px;
+    background: #BD5001;
+}
+.copyrigth{
+    margin-left: 30%;
+    margin-top: -50px;
+    color: #ffffff;
+}
+.partitura_barra{
+    position: relative;
+    width: 132px;
+    height: 29px;
+    left: 25%;
+    bottom: 52px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+}
+.cifra_barra{
+    position: absolute;
+    width: 132px;
+    height: 29px;
+    left: 41%;
+    top: 32%;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #ffffff;
+}
+.tablatura_barra{
+    position: absolute;
+    width: 132px;
+    height: 29px;
+    left: 55%;
+    top: 32%;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #ffffff;
+}
+.divBusca{
+    background-color:#ffffff;
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    margin-top: 10%;
+    margin-left: 100px;
+}
+   
+.txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:260px;
+    outline: none;
+}
+
+.btnBusca{
+    display: block;
+    width: 30px;
+
+}
