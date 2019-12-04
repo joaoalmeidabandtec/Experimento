@@ -9,7 +9,7 @@ module.exports = {
   },
   production: {
     username: 'root',
-    password: '12099violino',
+    password: 'bandtec',
     database: 'SheetMusic',
     host: '0.0.0.0',
     dialect: 'mysql',
